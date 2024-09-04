@@ -1,0 +1,18 @@
+project:
+  title: "rig-slides"
+  output-dir: docs
+  
+format: 
+  revealjs:
+    embed-resources: true
+    css: style.css
+    smaller: true
+    mermaid: 
+      theme: forest
+    logo: images/slides_footer.png
+
+title-slide-attributes:
+  data-background-image: images/ecohealth_slide_background_16by9.png
+  data-background-size: cover
+  data-background-position: left
+

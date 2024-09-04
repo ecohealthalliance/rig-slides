@@ -1,0 +1,146 @@
+---
+title: The Research Information Gateway
+subtitle: A tool to link research, expertise, and surveillance for One Health in Africa
+author: EcoHealth Alliance 
+institute: ""
+date: "4 September 2024"
+title-slide-attributes:
+  data-background-image: ""
+---
+
+## Outline
+
+<br/>
+
+* Purpose
+
+* Structure and interface
+
+* Technology
+
+* Use cases
+
+## Research Information Gateway
+
+<br/>
+
+* Prototype database designed as new module for Africa CDC Knowledge Hub
+
+* A detailed, searchable, and visual database of One Health research projects
+
+* Directory of subject matter experts for public health practitioners
+
+* Visual and functional dashboard and interfaces for ease of use
+
+## Research Information Gateway in a One Health Community of Practice
+
+<br/>
+
+:::: {.columns}
+
+::: {.column width="50%"}
+#### CoP goals and functions
+
+* Link subject matter experts with surveillance
+
+* Share resources in outbreak response
+
+* Improved awareness of research activities
+
+* Informed strategic research agenda planning
+
+:::
+
+::: {.column width="50%"}
+#### Enabling technology
+
+* Searchable, up-to-date directory of researchers
+
+* Track on-the-ground capacity
+
+* Map ongoing research and surveillance projects
+
+* Analyse gaps and priorities in current research
+
+:::
+
+::::
+
+## A One Health Scope
+
+<br/>
+
+* A focus on zoonotic diseases based on Africa CDC’s Framework for One Health Practice in National Public Health Institutes (2020), and Event Based Surveillance Framework (2018)
+
+    - **Activities**, **Researchers**, and **Topics** that are
+
+    - Related to **zoonotic disease**: infectious diseases that can be spread between animals and humans; can be spread by food, water, fomites or vectors
+    
+    - In or related to **African countries**
+
+## Data sources and flow
+
+<br/>
+
+```{mermaid}
+%%| out.width: 300px
+
+flowchart LR
+  input1(["Research Funder\nand\nInstitution data"])
+
+  input2(["Web\nscraping"])
+
+  input3(["Literature\nSearch"])
+  
+  input4(["Expert Surveys\n(planned)"])
+
+  action[/"Curation\nCross-linking\nValidation"/]
+    
+  output1[("On-the-ground\nactivities")]
+  
+  output2[("Experts\nand\nresearchers")]
+  
+  output3[("Funders")]
+
+  input1 ==> action
+  input2 ==> action
+  input3 ==> action
+  input4 ==> action
+  action ==> output1
+  action ==> output2
+  action ==> output3
+```
+
+## Development pathway
+
+```{mermaid}
+%%| out.width: 300px
+
+flowchart TD
+
+airtable[Airtable]
+airtable_interface[/Airtable Interfaces/]
+dolt[dolt]
+dolthub[dolthub]
+khub("Knowledge\nHub")
+dashboard(Dashboard)
+research("Research\nworkflow")
+api[/API/]
+
+airtable --> dolt -->|powers|dolthub
+airtable -->|feeds|airtable_interface
+dolthub <--> api <--> khub
+dolthub <--> api <--> dashboard
+dolthub <--> api <--> research
+```
+
+## Development updates
+
+* Africa CDC colleagues are integrating the database to the Knowledge Hub
+
+* Updating database with new sources and funders then will add activities and researchers
+
+    * search for funders led to Pandemic PACT initiative - lots of overlap with database and has more records (9000+)
+    
+* Streamlining of fields in the main tables for **Activities** and **Researchers**
+
