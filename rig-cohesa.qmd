@@ -113,6 +113,8 @@ flowchart LR
 
 ## Development pathway
 
+<br/>
+
 ```{mermaid}
 %%| out.width: 300px
 
@@ -135,6 +137,8 @@ dolthub <--> api <--> research
 ```
 
 ## Development updates
+
+<br/>
 
 * Africa CDC colleagues are integrating the database to the Knowledge Hub
 

@@ -10,6 +10,7 @@ format:
     mermaid: 
       theme: forest
     logo: images/slides_footer.png
+    output-file: rig-cohesa.html
 
 title-slide-attributes:
   data-background-image: images/ecohealth_slide_background_16by9.png
