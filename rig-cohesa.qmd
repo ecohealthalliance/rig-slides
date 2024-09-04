@@ -84,6 +84,7 @@ title-slide-attributes:
 
 ```{mermaid}
 %%| out.width: 300px
+%%| fig.align: center
 
 flowchart LR
   input1(["Research Funder\nand\nInstitution data"])
@@ -112,6 +113,7 @@ flowchart LR
 
 ```{mermaid}
 %%| out.width: 300px
+%%| fig.align: center
 
 flowchart TD
 
